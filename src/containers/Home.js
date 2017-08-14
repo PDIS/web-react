@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import { Layout, Menu, Breadcrumb } from 'antd';
+import logo from '../images/PDIS-logo.png'
 const { Content } = Layout;
 
 class Home extends React.Component {
@@ -16,18 +17,10 @@ class Home extends React.Component {
 
   render() {
     return (
-      <Layout className="layout">
-        <Header />
-        <Content style={{ padding: '0 50px', marginTop: 64 }}>
-          <Breadcrumb style={{ margin: '12px 0' }}>
-            <Breadcrumb.Item>Home</Breadcrumb.Item>
-            <Breadcrumb.Item>List</Breadcrumb.Item>
-            <Breadcrumb.Item>App</Breadcrumb.Item>
-          </Breadcrumb>
-          <div style={{ background: '#fff', padding: 24, minHeight: 380 }}>Content</div>
-        </Content>
-        <Footer />
-      </Layout>
+      <div style={{ background: '#fff', padding: 24, minHeight: 380 }}>
+        Content
+        <img src={logo}/>
+      </div>
     );
   }
 }

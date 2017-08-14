@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-class Home extends React.Component {
+class Members extends React.Component {
   constructor(props) {
     super(props);
 
@@ -61,4 +61,4 @@ class Home extends React.Component {
   }
 }
 
-export default Home;
+export default Members;
