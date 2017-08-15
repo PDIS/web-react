@@ -6,7 +6,7 @@ const { Header } = Layout;
 class Head extends React.Component {
   render() {
     return (
-      <Header style={{ width: '100%' }}>
+      <Header style={{ position: 'fixed', width: '100%' }}>
         <div className="logo" />
         <Menu
           theme="dark"
