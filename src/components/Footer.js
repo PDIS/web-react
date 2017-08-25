@@ -40,7 +40,7 @@ class Foot extends React.Component {
       <h6 className="heading">A maximus lectus</h6>
       <article>
         <h2 className="nospace font-x1"><a href="#">Suspendisse potenti proin</a></h2>
-        <time className="font-xs" datetime="2045-04-06">Friday, 6<sup>th</sup> April 2045</time>
+        <time className="font-xs" >Friday, 6<sup>th</sup> April 2045</time>
         <p>Tortor a erat aliquam a consequat augue a elementum ante donec luctus posuere mauris non tempus felis [&hellip;]</p>
       </article>
     </div>

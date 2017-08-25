@@ -19,7 +19,7 @@ class Head extends React.Component {
           <Menu.Item key="2"><Link to="/about">Members</Link></Menu.Item>
         </Menu>
       </Header> */
-      <div className="bgded overlay" style={{"background-image":"url('images/demo/backgrounds/01.png')"}}> 
+      <div className="bgded overlay" style={{"backgroundImage":"url('images/demo/backgrounds/01.png')"}}> 
  
   <div className="wrapper row1">
     <header id="header" className="hoc clear"> 

@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import '../styles/layout.css';
 
 class Members extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      posts: []
+      members: []
     };
   }
 
@@ -14,33 +15,36 @@ class Members extends React.Component {
     try {
       let groups = await fetch('https://talk.pdis.nat.gov.tw/groups/PDIS/members.json?limit=100000')
       let group = await groups.json();
+      let people = [];
       for (let i of group.members) {
         let members = await fetch("https://talk.pdis.nat.gov.tw/u/" + i.username + ".json")
         let member = await members.json()
         let user = member.user
-        let people = {};
-        people['id'] = user.id;
+        let person = {};
+        person['id'] = user.id;
         if (user.name == '') {
-          people['name'] = user.username;
+          person['name'] = user.username;
         }
         else {
-          people['name'] = user.name;
+          person['name'] = user.name;
         }
-        people['username'] = user.username;
-        people['image'] = 'https://talk.pdis.nat.gov.tw/' + user.avatar_template.replace("{size}", "800");
-        people['wiselikelink'] = "https://wiselike.tw/#/user/" + user.username;
+        person['username'] = user.username;
+        person['image'] = 'https://talk.pdis.nat.gov.tw/' + user.avatar_template.replace("{size}", "800");
+        person['wiselikelink'] = "https://wiselike.tw/#/user/" + user.username;
         let infos = await fetch("https://talk.pdis.nat.gov.tw/c/wiselike/profile-" + user.username.toString().toLowerCase().replace(/_/g, '-') + ".json")
         let info = await infos.json()
         let topic = info.topic_list.topics[0];
         var content = topic.excerpt.replace(" :new:", "");
         if (content.includes("建立一個完整的")) {
-          people['description'] = "";
+          person['description'] = "";
         }
         else {
-          people['description'] = content;
+          person['description'] = content;
         }
-        console.log(people)
+        people.push(person);
       }
+      //console.log(member)
+      this.setState({members:people})
     }
     catch (e) {
       console.log(e)
@@ -48,15 +52,26 @@ class Members extends React.Component {
   }
 
   render() {
-    return (
-      <div>
-        <h1>{`/r/${this.props.subreddit}`}</h1>
+    return ( 
+    /*   <div>
         <ul>
-          {this.state.posts.map(post =>
-            <li key={post.id}>{post.user.name}</li>
+          {this.state.members.map(member =>
+            <li key={member.id}>{member.name}</li>
           )}
         </ul>
-      </div>
+      </div> */
+       <div className="wrapper row2">
+        <section className="hoc container clear">
+          <div className="sectiontitle">
+            <h6 className="heading">Members</h6>
+          </div>
+          <div className="group">
+          {this.state.members.map((member) => (
+            <div key={member.id} className="one_third"><a className="imgover" href="#"><img src={member.image} alt="" /></a></div>
+          ))}
+          </div>
+        </section>
+      </div> 
     );
   }
 }
