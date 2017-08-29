@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from '../images/PDIS-logo.png'
 import '../styles/Home.css'
+import {Icon} from 'antd'
 
 export default class Home extends React.Component {
   constructor(props) {
@@ -9,13 +10,16 @@ export default class Home extends React.Component {
       topicSelect: 0,
       topicWord: [
         { prev: 'What',
-          next: 'Do'
+          next: 'Do',
+          desc: '我們做了些什麼我們做了些什麼我們做了些什麼我們做了些什麼我們做了些什麼我們做了些什麼'
         },
         { prev: 'How',
-          next: 'Work'
+          next: 'Work',
+          desc: '我們如何工作我們如何工作我們如何工作我們如何工作我們如何工作我們如何工作'
         },
         { prev: 'Who',
-          next: 'Are'
+          next: 'Are',
+          desc: '我們是誰我們是誰我們是誰我們是誰我們是誰我們是誰'
         },
       ]
     };
@@ -24,6 +28,7 @@ export default class Home extends React.Component {
   render() {
     return (
       <div className="home">
+
         <div className="face section">
           <div className="logo">
             <div className="prevWord">{this.state.topicWord[this.state.topicSelect].prev}</div>
@@ -31,24 +36,36 @@ export default class Home extends React.Component {
             <div className="nextWord">{this.state.topicWord[this.state.topicSelect].next}</div>
           </div>
           <div className="topic">
-            <a href='#what' onMouseEnter={() => this.setState({topicSelect: 0})}>WHAT</a>
-            <a href='#how' onMouseEnter={() => this.setState({topicSelect: 1})}>HOW</a>
-            <a href='#who' onMouseEnter={() => this.setState({topicSelect: 2})}>WHO</a>
+            <a href='#what' onMouseEnter={() => this.setState({topicSelect: 0})}>
+              <Icon type='trophy' />
+            </a>
+            <a href='#how' onMouseEnter={() => this.setState({topicSelect: 1})}>
+              <Icon type='coffee' />
+            </a>
+            <a href='#who' onMouseEnter={() => this.setState({topicSelect: 2})}>
+              <Icon type='smile-o' />
+            </a>
+          </div>
+          <div className='desc'>
+            {this.state.topicWord[this.state.topicSelect].desc}
           </div>
         </div>
+
         <div className="what section" id="what">
           <div className="center">
-            WHAT
+            <Icon type='trophy' />
           </div>
         </div>
+
         <div className="how section" id="how">
           <div className="center">
-            HOW
+            <Icon type='coffee' />
           </div>
         </div>
+
         <div className="who section" id="who">
           <div className="center">
-            WHO
+            <Icon type='smile-o' />
           </div>
         </div>
       </div>

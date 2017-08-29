@@ -1,20 +1,25 @@
+.center {
+    margin: auto;
+    text-align: center;
+}
 .section {
     min-height: 30rem;
     display: flex;
     font-size: 3rem;
+    color: dimgray;
 }
 .section:nth-child(2n) {
     background-color: white;
 }
 .face {
-    max-width: 768px;
-    height: 100vh;
-    margin: 0 auto;
+    max-width: 1200px;
+    height: 80vh;
+    margin: 10vh auto;
     display: flex;
     font-size: 3rem;
 }
 .logo {
-    flex: 0 0 50%;
+    flex: 0 0 30%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -24,13 +29,30 @@
     width: 100%;
     height: auto;
 }
+.logo .prevWord,
+.logo .nextWord {
+    font-size: 8rem;
+    line-height: 1;
+}
 .topic {
-    flex: 0 0 50%;
+    flex: 0 0 20%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
 }
-.center {
-    margin: auto;
+.topic a {
+    display: inline-block;
+    text-align: center;
+    width: 2em;
+    height: 2em;
+    line-height: 2;
+    border-radius: 100%;
+    background: white;
+    margin: .1em;
+}
+.desc {
+    flex: 0 0 40%;
+    line-height: 1;
+    margin: auto 0;
 }
