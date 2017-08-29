@@ -5,6 +5,7 @@ import Home from '../containers/Home'
 import Members from '../containers/Members'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import Tracking from '../containers/Tracking'
 const { Content } = Layout;
 
 export default class Landing extends React.Component {
@@ -22,6 +23,7 @@ export default class Landing extends React.Component {
         <Content>
           <Route exact path="/" component={Home}/>
           <Route path="/about" component={Members}/>
+          <Route path="/track" component={Tracking}/>
         </Content>
         <Footer />
       </Layout>

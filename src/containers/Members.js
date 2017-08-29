@@ -53,13 +53,6 @@ class Members extends React.Component {
 
   render() {
     return ( 
-    /*   <div>
-        <ul>
-          {this.state.members.map(member =>
-            <li key={member.id}>{member.name}</li>
-          )}
-        </ul>
-      </div> */
        <div className="wrapper row2">
         <section className="hoc container clear">
           <div className="sectiontitle">
