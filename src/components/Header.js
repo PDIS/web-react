@@ -6,7 +6,7 @@ import '../styles/layout.css'
 class Head extends React.Component {
   render() {
     return (
-        <div className="wrapper row1" style={{'position':'fixed','background':'#DDD'}}>
+        <div className="wrapper row1" style={{'position':'fixed','background':'#DDD','zIndex':'100'}}>
           <header id="header" className="hoc clear">
 
             <div id="logo" className="fl_left">

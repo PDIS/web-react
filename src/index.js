@@ -3,6 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import Landing from './containers/Landing'
 import registerServiceWorker from './registerServiceWorker';
+import { BrowserRouter } from 'react-router-dom'
 
-ReactDOM.render(<Landing />, document.getElementById('root'));
-registerServiceWorker();
+ReactDOM.render(
+  <BrowserRouter>
+    <Landing />
+  </BrowserRouter>,
+  document.getElementById('root')
+)
+
+registerServiceWorker()

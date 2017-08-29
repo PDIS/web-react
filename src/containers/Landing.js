@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Route} from 'react-router-dom'
+import {Route} from 'react-router-dom'
 import {Layout} from 'antd';
 import Home from '../containers/Home'
 import Members from '../containers/Members'
@@ -17,16 +17,14 @@ export default class Landing extends React.Component {
 
   render() {
     return (
-      <Router>
-        <Layout>
-          <Header />
-          <Content>
-            <Route exact path="/" component={Home}/>
-            <Route path="/about" component={Members}/>
-          </Content>
-          <Footer />
-        </Layout>
-      </Router>
+      <Layout>
+        <Header />
+        <Content>
+          <Route exact path="/" component={Home}/>
+          <Route path="/about" component={Members}/>
+        </Content>
+        <Footer />
+      </Layout>
     )
   }
 }
