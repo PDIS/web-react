@@ -1,0 +1,74 @@
+@import url("../styles/font-awesome.min.css");
+
+.row4 {
+    color: #cbcbcb;
+    background-color: #33363b;
+}
+.wrapper {
+    display: block;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+#footer {
+    padding: 80px 0;
+}
+#footer .heading {
+    margin-bottom: 50px;
+    font-size: 1.2rem;
+}
+#footer nav ul li {
+    display: inline-block;
+    margin-right: 15px;
+}
+#footer .linklist li {
+    display: block;
+    margin-bottom: 12px;
+    padding: 0 0 12px;
+    border-bottom: 1px solid;
+    border-color: hsla(0,0%,100%,.1);
+}
+
+
+.one_quarter {
+    width: 22.69938650306748%;
+}
+.one_half, .one_quarter, .one_third, .three_quarter, .two_quarter, .two_third {
+    display: inline-block;
+    float: left;
+    margin: 0 0 0 3.06748466257669%;
+    list-style: none;
+}
+.first {
+    margin-left: 0;
+    clear: left;
+}
+
+.faico {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.faico li {
+    display: inline-block;
+    margin: 8px 5px 0 0;
+    padding: 0;
+    line-height: normal;
+}
+.faico a {
+    color: inherit;
+    background-color: #2b2f32;
+}
+.faico a {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 18px;
+    text-align: center;
+    color: inherit;
+}

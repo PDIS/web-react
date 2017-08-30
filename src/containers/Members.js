@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import '../styles/layout.css';
+// import '../styles/layout.css';
 
 class Members extends React.Component {
   constructor(props) {
@@ -52,7 +52,7 @@ class Members extends React.Component {
   }
 
   render() {
-    return ( 
+    return (
        <div className="wrapper row2">
         <section className="hoc container clear">
           <div className="sectiontitle">
@@ -64,7 +64,7 @@ class Members extends React.Component {
           ))}
           </div>
         </section>
-      </div> 
+      </div>
     );
   }
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import '../styles/layout.css';
+// import '../styles/layout.css';
 
 class Tracking extends React.Component {
   constructor(props) {
@@ -14,7 +14,7 @@ class Tracking extends React.Component {
       autoLoad: true,
     };
   }
- 
+
   async componentDidMount() {
     try {
       let tagdata = await fetch("https://talk.pdis.nat.gov.tw/tags/filter/search.json");
@@ -32,7 +32,7 @@ class Tracking extends React.Component {
       }
       this.setState({ tags: tags })
       /* init categories tab header */
-      
+
     }
     catch (e) {
       console.log(e)
