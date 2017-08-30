@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import '../styles/layout.css';
 
 class Members extends React.Component {
   constructor(props) {
