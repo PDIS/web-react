@@ -17,8 +17,9 @@ class Head extends React.Component {
 
             <nav id="mainav" className="fl_right">
               <ul className="clear">
-                <li className="active"><Link to="/">Home</Link></li>
-                <li><Link to="/about">MEMBERS</Link></li>
+                <li className="active"><Link to="/">首頁</Link></li>
+                <li><Link to="/track">追蹤</Link></li>
+                <li><Link to="/about">我們是誰</Link></li>
               </ul>
             </nav>
 
