@@ -53,7 +53,7 @@ class Members extends React.Component {
 
   render() {
     return ( 
-       <div className="wrapper row2">
+       /* <div className="wrapper row2">
         <section className="hoc container clear">
           <div className="sectiontitle">
             <h6 className="heading">Members</h6>
@@ -64,7 +64,34 @@ class Members extends React.Component {
           ))}
           </div>
         </section>
-      </div> 
+      </div>  */
+              <div className="container g-margin-b-100--xs">
+          <div id="js__grid-portfolio-gallery" className="cbp">
+            <div className="s-portfolio__item cbp-item logos motion">
+              <div className="s-portfolio__img-effect">
+                <img src="img/970x647/05.jpg" alt="Portfolio Image" />
+              </div>
+              <div className="s-portfolio__caption-hover--cc">
+                <div className="g-margin-b-25--xs">
+                  <h4 className="g-font-size-18--xs g-color--white g-margin-b-5--xs">Portfolio Item</h4>
+                  <p className="g-color--white-opacity">by KeenThemes Inc.</p>
+                </div>
+                <ul className="list-inline g-ul-li-lr-5--xs g-margin-b-0--xs">
+                  <li>
+                    <a href="img/970x647/05.jpg" className="cbp-lightbox s-icon s-icon--sm s-icon--white-bg g-radius--circle" data-title="Portfolio Item <br/> by KeenThemes Inc.">
+                      <i className="ti-fullscreen"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes" className="s-icon s-icon--sm s-icon s-icon--white-bg g-radius--circle">
+                      <i className="ti-link"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
     );
   }
 }

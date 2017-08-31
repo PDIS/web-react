@@ -27,23 +27,23 @@ class Tracking extends React.Component {
   }
 
   async goAnchor(anchor) {
-        // console.log(anchor)
-        if (anchor == "top") {
-            /* go to top */
-            $('html, body').animate({
-                scrollTop: 0,
-            }, 300)
-        }
-        else if (anchor) {
-            /* get the top position of anchor */
-            let anchor_y = $(anchor).offset().top
-            /* go to anchor (animation to do) */
-            $('html, body').animate({
-                scrollTop: anchor_y,
-            }, 300)
-        }
-        return false
+    // console.log(anchor)
+    if (anchor == "top") {
+      /* go to top */
+      $('html, body').animate({
+        scrollTop: 0,
+      }, 300)
     }
+    else if (anchor) {
+      /* get the top position of anchor */
+      let anchor_y = $(anchor).offset().top
+      /* go to anchor (animation to do) */
+      $('html, body').animate({
+        scrollTop: anchor_y,
+      }, 300)
+    }
+    return false
+  }
 
   async componentDidMount() {
     try {
@@ -90,7 +90,7 @@ class Tracking extends React.Component {
   render() {
     return (
       <div>
-        {/* console.log(this.state.tags) */}
+
       </div>
     );
   }
