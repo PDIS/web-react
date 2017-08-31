@@ -1,0 +1,36 @@
+/*
+.App-logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 80px;
+}
+@keyframes App-logo-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+*/
+
+.header-wrapper {
+    width: 100%;
+    position: fixed;
+    background: #ddd;
+    z-index: 100;
+}
+
+
+
+#mainav li {
+    display: inline-block;
+    position: relative;
+    margin: 0 15px 0 0;
+    padding: 0;
+}
+#mainav li:last-child {
+    margin-right: 0;
+}
+#mainav li a {
+    display: block;
+    padding: 30px 0;
+}
+/* #mainav .active a, #mainav a:hover, #mainav li:hover > a {
+    color: #0000FE;
+} */

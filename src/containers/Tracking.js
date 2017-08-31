@@ -1,8 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+<<<<<<< HEAD
+// import '../styles/layout.css';
+=======
 import * as YAML from 'yamljs';
 import '../styles/layout.css';
 import $ from 'jquery';
+>>>>>>> a3da9241dcff71354d46c4c712be65782bed53c6
 
 class Tracking extends React.Component {
   constructor(props) {
@@ -18,6 +22,8 @@ class Tracking extends React.Component {
     };
   }
 
+<<<<<<< HEAD
+=======
   async getCategories() { //取得分類(置頂文章)
     let catdata = await fetch("https://talk.pdis.nat.gov.tw/t/how-we-work-track/73.json?include_raw=1");
     let cats = await catdata.json();
@@ -45,6 +51,7 @@ class Tracking extends React.Component {
     return false
   }
 
+>>>>>>> a3da9241dcff71354d46c4c712be65782bed53c6
   async componentDidMount() {
     try {
       let tagdata = await fetch("https://talk.pdis.nat.gov.tw/tags/filter/search.json");
@@ -62,6 +69,9 @@ class Tracking extends React.Component {
       }
       this.setState({ tags: tags })
       /* init categories tab header */
+<<<<<<< HEAD
+
+=======
       let Cats = await this.getCategories();
       if (this.state.total.length > 0) return
       this.state.total.push({ category: 'All', posts: new Array() })
@@ -81,6 +91,7 @@ class Tracking extends React.Component {
         //this.goAnchor('#cloud');
       }
       this.total.forEach(t => t.posts = []);
+>>>>>>> a3da9241dcff71354d46c4c712be65782bed53c6
     }
     catch (e) {
       console.log(e)

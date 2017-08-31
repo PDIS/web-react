@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from '../images/PDIS-logo.png'
-import '../styles/Home.css'
+import './Home.css'
 import {Icon} from 'antd'
 
 export default class Home extends React.Component {
