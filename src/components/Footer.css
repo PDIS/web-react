@@ -33,6 +33,9 @@
     border-color: hsla(0,0%,100%,.1);
 }
 
+.heading {
+    color: white;
+}
 
 .one_quarter {
     width: 22.69938650306748%;
@@ -46,6 +49,12 @@
 .first {
     margin-left: 0;
     clear: left;
+}
+@media screen and (max-width: 768px) {
+    .one_quarter {
+        width: 95%;
+        margin: 1em 2.5%;
+    }
 }
 
 .faico {

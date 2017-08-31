@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from '../images/PDIS-logo.png'
 import './Home.css'
-import {Icon} from 'antd'
+import {Icon, Row, Col} from 'antd'
 
 export default class Home extends React.Component {
   constructor(props) {
@@ -30,25 +30,33 @@ export default class Home extends React.Component {
       <div className="home">
 
         <div className="face section">
-          <div className="logo">
-            <div className="prevWord">{this.state.topicWord[this.state.topicSelect].prev}</div>
-            <img src={logo} alt="pdis logo" />
-            <div className="nextWord">{this.state.topicWord[this.state.topicSelect].next}</div>
-          </div>
-          <div className="topic">
-            <a href='#what' onMouseEnter={() => this.setState({topicSelect: 0})}>
-              <Icon type='trophy' />
-            </a>
-            <a href='#how' onMouseEnter={() => this.setState({topicSelect: 1})}>
-              <Icon type='coffee' />
-            </a>
-            <a href='#who' onMouseEnter={() => this.setState({topicSelect: 2})}>
-              <Icon type='smile-o' />
-            </a>
-          </div>
-          <div className='desc'>
-            {this.state.topicWord[this.state.topicSelect].desc}
-          </div>
+          <Row type="flex" justify="center" align="middle" gutter={16}>
+            <Col lg={6} sm={6} xs={10}>
+              <div className="logo center">
+                <div className="prevWord">{this.state.topicWord[this.state.topicSelect].prev}</div>
+                <img src={logo} alt="pdis logo" />
+                <div className="nextWord">{this.state.topicWord[this.state.topicSelect].next}</div>
+              </div>
+            </Col>
+            <Col lg={3} sm={3} xs={24}>
+              <div className="topic center">
+                <a href='#what' onMouseEnter={() => this.setState({topicSelect: 0})}>
+                  <Icon type='trophy' />
+                </a>
+                <a href='#how' onMouseEnter={() => this.setState({topicSelect: 1})}>
+                  <Icon type='coffee' />
+                </a>
+                <a href='#who' onMouseEnter={() => this.setState({topicSelect: 2})}>
+                  <Icon type='smile-o' />
+                </a>
+              </div>
+            </Col>
+            <Col lg={8} sm={10} xs={20}>
+              <div className='desc'>
+                {this.state.topicWord[this.state.topicSelect].desc}
+              </div>
+            </Col>
+          </Row>
         </div>
 
         <div className="what section" id="what">
