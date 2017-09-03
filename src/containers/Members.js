@@ -44,9 +44,9 @@ class Members extends React.Component {
           person['description'] = content;
         }
         people.push(person);
+        this.setState({members: people})
       }
       //console.log(member)
-      this.setState({members: people})
     } catch (e) {
       console.log(e)
     }
