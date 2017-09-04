@@ -50,3 +50,14 @@ p {
     display: table;
     content: "";
 }
+
+@media screen and (min-width: 978px) {
+    .thin-only {
+        display: none;
+    }
+}
+@media screen and (max-width: 977px) {
+    .fat-only {
+        display: none;
+    }
+}

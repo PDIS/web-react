@@ -13,6 +13,7 @@ header.header-wrapper {
   height: 5rem;
   width: 100%;
   position: absolute;
+  top: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -24,7 +25,20 @@ header.header-wrapper {
   margin: 5px 1ch 0 0;
 }
 
-nav.mainav>ul>li {
+nav.fat-nav>ul>li {
   display: inline-block;
   margin: 0 1ch;
+}
+
+nav.thin-nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  width: 100vw;
+  transition: all .3s ease;
+}
+
+nav.thin-nav>ul {
+  height: 100vh;
 }
