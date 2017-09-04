@@ -11,17 +11,17 @@ export default class Home extends React.Component {
       topicWord: [
         { prev: 'What',
           next: 'Do',
-          desc: {__html: "<h1>我們做了些什麼？</h1><p>test test test</p>"},
+          desc: {__html: "<h1>我們做了些什麼？</h1><p>test test test test test test test test test test test test</p>"},
           link: '#what'
         },
         { prev: 'How',
           next: 'Work',
-          desc: {__html: "<h1>我們如何工作？</h1><p>test test test</p>"},
+          desc: {__html: "<h1>我們如何工作？</h1><p>test test test test test test test test test test test test</p>"},
           link: '#how'
         },
         { prev: 'Who',
           next: 'Are',
-          desc: {__html: "<h1>我們是誰？</h1><p>test test test</p>"},
+          desc: {__html: "<h1>我們是誰？</h1><p>test test test test test test test test test test test test</p>"},
           link: '#who'
         },
       ]
@@ -34,7 +34,7 @@ export default class Home extends React.Component {
 
         <div className="face section">
           <Row type="flex" justify="center" align="middle" gutter={16}>
-            <Col lg={5} sm={5} xs={10}>
+            <Col lg={5} sm={5} xs={8}>
               <div className="logo center">
                 <h1 className="prevWord">{this.state.topicWord[this.state.topicSelect].prev}</h1>
                 <img src={logo} alt="pdis logo" />
@@ -52,12 +52,9 @@ export default class Home extends React.Component {
                 <div className="circle-button">
                 <Button icon='smile-o' shape='circle' size='large' onMouseEnter={() => this.setState({topicSelect: 2})} />
                 </div>
-{/*                 <a href='#what' onMouseEnter={() => this.setState({topicSelect: 0})}>
-                  <Icon type='trophy' />
-                </a> */}
               </div>
             </Col>
-            <Col lg={8} sm={10} xs={20}>
+            <Col lg={6} sm={8} xs={22}>
               <div className='desc' dangerouslySetInnerHTML={this.state.topicWord[this.state.topicSelect].desc} />
               <div className="go-button">
                 <Button icon='down' size='large' onClick={() => (window.location.href = this.state.topicWord[this.state.topicSelect].link)}>
