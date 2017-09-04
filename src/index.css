@@ -33,6 +33,11 @@ p {
     }
 }
 
+.center {
+    margin: auto;
+    text-align: center;
+}
+
 .fl_left {
     float: left;
 }
@@ -44,9 +49,4 @@ p {
     clear: both;
     display: table;
     content: "";
-}
-
-.center {
-    margin: auto;
-    text-align: center;
 }

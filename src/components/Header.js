@@ -1,86 +1,91 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { Dropdown, Menu, Icon } from 'antd'
 import clearlogo from '../images/pdis-logo-final-clear.png'
 import './Header.css'
 
+const menuWork = (
+  <Menu>
+    <Menu.Item key="0">
+      <Link to="/">開放政府</Link>
+    </Menu.Item>
+    <Menu.Item key="1">
+      <Link to="/">數位服務</Link>
+    </Menu.Item>
+    <Menu.Item key="2">
+      <Link to="/">社會企業</Link>
+    </Menu.Item>
+    <Menu.Item key="3">
+      <Link to="/">青年咨詢委員會</Link>
+    </Menu.Item>
+    <Menu.Divider />
+    <Menu.Item key="10">
+      <Link to="/track">歷程</Link>
+    </Menu.Item>
+  </Menu>
+)
+
+const menuHow = (
+  <Menu>
+    <Menu.Item key="0">
+      <Link to="/tool">工具</Link>
+    </Menu.Item>
+    <Menu.Divider />
+    <Menu.Item key="1">
+      <Link to="/">進行中</Link>
+    </Menu.Item>
+  </Menu>
+)
+
 class Head extends React.Component {
-	render() {
-		return (
-      /* <div className="header-wrapper">
-        <header id="header" className="hoc">
-          <div className="nav-header">
-            <div id="logo" className="fl_left">
-              <Link to='/'>
-                <img
-                  src={clearlogo}
-                  alt="pdis logo"
-                  style={{
-                  'width': '100px',
-                  'marginTop': '22px'
-                }}/>
-              </Link>
-            </div>
+  render() {
+    return (
+      <header className="header-wrapper">
 
-            <nav id="mainav" className="fl_right">
-              <ul className="clear">
-                <li className="active">
-                  <Link to="/">首頁</Link>
-                </li>
-                <li>
-                  <Link to="/track">追蹤</Link>
-                </li>
-                <li>
-                  <Link to="/about">我們是誰</Link>
-                </li>
-                <li>
-                <Link to="/tool">工具</Link>
-              </li>
-              </ul>
-            </nav>
-          </div>
-        </header>
-			</div> */
-			<div className="wrapper row1">
-				<header id="header" className="hoc clear">
+        <div className="clear-logo">
+          <Link to='/'>
+            <img
+              src={clearlogo}
+              alt="pdis logo"/>
+          </Link>
+        </div>
 
-					<div id="logo" className="fl_left">
-						<Link to='/'>
-							<img
-								src={clearlogo}
-								alt="pdis logo"
-								style={{
-									'width': '100px',
-									'marginTop': '22px'
-								}} />
-						</Link>
-					</div>
+        <nav className="mainav">
+          <ul>
+            <li>
+              <p>
+                <Link to="/">首頁</Link>
+              </p>
+            </li>
+            <li>
+              <Dropdown overlay={menuWork} trigger={['click']}>
+                <p>
+                  <a className="ant-dropdown-link" href="#">
+                    工作紀錄 <Icon type="down" />
+                  </a>
+                </p>
+              </Dropdown>
+            </li>
+            <li>
+              <Dropdown overlay={menuHow} trigger={['click']}>
+                <p>
+                  <a className="ant-dropdown-link" href="#">
+                    工作流程 <Icon type="down" />
+                  </a>
+                </p>
+              </Dropdown>
+            </li>
+            <li>
+              <p>
+                <Link to="/about">聯絡我們</Link>
+              </p>
+            </li>
+          </ul>
+        </nav>
 
-					<nav id="mainav" className="fl_right">
-						<ul className="clear">
-							<li className="active"><Link to="/">首頁</Link></li>
-							<li><a className="drop" href="#">工作紀錄</a>
-								<ul>
-									<li><Link to="/">開放政府</Link></li>
-									<li><Link to="/">數位服務</Link></li>
-									<li><Link to="/">社會企業</Link></li>
-									<li><Link to="/">青年咨詢委員會</Link></li>
-									<li><Link to="/track">歷程</Link></li>
-								</ul>
-							</li>
-							<li><a className="drop" href="#">如何</a>
-								<ul>
-									<li><Link to="/tool">工具</Link></li>
-									<li><Link to="/">進行中</Link></li>
-								</ul>
-							</li>
-							<li><Link to="/about">聯絡我們</Link></li>
-						</ul>
-					</nav>
-
-				</header>
-			</div>
-		)
-	}
+      </header>
+    )
+  }
 }
 
 export default Head;
