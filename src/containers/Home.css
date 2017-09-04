@@ -1,14 +1,16 @@
 
 .section {
-    min-height: 30rem;
-    display: flex;
+    min-height: 50vh;
     color: dimgray;
     overflow: hidden;
+    padding: 1em 0;
 }
 .section:nth-child(2n) {
     background-color: white;
 }
+
 .face {
+    display: flex;
     margin-top: 5rem;
     height: calc(100vh - 5rem);
 }
@@ -46,6 +48,9 @@
 }
 
 .desc {
-    /* font-size: 3rem; */
+    margin: 1em 0;
+    /* padding: .2em 1em; */
     line-height: 2;
+    /* border: solid lightgray;
+    border-width: 1px 0 0 1px; */
 }

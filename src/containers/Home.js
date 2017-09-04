@@ -34,11 +34,11 @@ export default class Home extends React.Component {
 
         <div className="face section">
           <Row type="flex" justify="center" align="middle" gutter={16}>
-            <Col lg={6} sm={6} xs={10}>
+            <Col lg={5} sm={5} xs={10}>
               <div className="logo center">
-                <div className="prevWord">{this.state.topicWord[this.state.topicSelect].prev}</div>
+                <h1 className="prevWord">{this.state.topicWord[this.state.topicSelect].prev}</h1>
                 <img src={logo} alt="pdis logo" />
-                <div className="nextWord">{this.state.topicWord[this.state.topicSelect].next}</div>
+                <h1 className="nextWord">{this.state.topicWord[this.state.topicSelect].next}</h1>
               </div>
             </Col>
             <Col lg={3} sm={3} xs={24}>
@@ -69,21 +69,27 @@ export default class Home extends React.Component {
         </div>
 
         <div className="what section" id="what">
-          <div className="center">
+          <h1 className="center">
             <Icon type='trophy' />
-          </div>
+            &nbsp;
+            What we do
+          </h1>
         </div>
 
         <div className="how section" id="how">
-          <div className="center">
+          <h1 className="center">
             <Icon type='coffee' />
-          </div>
+            &nbsp;
+            How we work
+          </h1>
         </div>
 
         <div className="who section" id="who">
-          <div className="center">
+          <h1 className="center">
             <Icon type='smile-o' />
-          </div>
+            &nbsp;
+            Who we are
+          </h1>
         </div>
       </div>
     );
