@@ -81,3 +81,18 @@
     text-align: center;
     color: inherit;
 }
+.fh5co-social-icons > a {
+  padding: 4px 10px;
+  color: #FCC72C;
+}
+.fh5co-social-icons > a i {
+  font-size: 26px;
+}
+.fh5co-social-icons > a:hover, .fh5co-social-icons > a:focus, .fh5co-social-icons > a:active {
+  text-decoration: none;
+  color: #5a5a5a;
+}
+
+.icon-heart3:before {
+    content: "\e9b6";
+}

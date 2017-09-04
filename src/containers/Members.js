@@ -59,9 +59,7 @@ class Members extends React.Component {
           <div className="row">
             <div
               className="col-md-8 col-md-offset-2 text-center heading-section animate-box">
-              <h3>Outstanding Projects</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit est facilis
-                maiores, perspiciatis accusamus asperiores sint consequuntur debitis.</p>
+              <h3>對我們有什麼疑問嗎？歡迎點一下大頭照到wiselike問我們問題唷！</h3>
             </div>
           </div>
         </div>
