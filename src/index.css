@@ -4,16 +4,19 @@
     box-sizing: border-box;
 }
 */
-html, body {
+body {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
     font-size: 16px;
 }
 @media screen and (max-width: 768px) {
     body {
         font-size: 12px;
     }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Noto Serif', Georgia, 'Microsoft JhengHei','Heiti TC', sans-serif;
 }
 
 .hoc {

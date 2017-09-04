@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from '../images/PDIS-logo.png'
 import './Home.css'
-import {Icon, Row, Col} from 'antd'
+import {Icon, Row, Col, Button} from 'antd'
 
 export default class Home extends React.Component {
   constructor(props) {
@@ -11,15 +11,18 @@ export default class Home extends React.Component {
       topicWord: [
         { prev: 'What',
           next: 'Do',
-          desc: '我們做了些什麼我們做了些什麼我們做了些什麼我們做了些什麼我們做了些什麼我們做了些什麼'
+          desc: {__html: "<h1>我們做了些什麼？</h1><p>test test test</p>"},
+          link: '#what'
         },
         { prev: 'How',
           next: 'Work',
-          desc: '我們如何工作我們如何工作我們如何工作我們如何工作我們如何工作我們如何工作'
+          desc: {__html: "<h1>我們如何工作？</h1><p>test test test</p>"},
+          link: '#how'
         },
         { prev: 'Who',
           next: 'Are',
-          desc: '我們是誰我們是誰我們是誰我們是誰我們是誰我們是誰'
+          desc: {__html: "<h1>我們是誰？</h1><p>test test test</p>"},
+          link: '#who'
         },
       ]
     };
@@ -40,20 +43,26 @@ export default class Home extends React.Component {
             </Col>
             <Col lg={3} sm={3} xs={24}>
               <div className="topic center">
-                <a href='#what' onMouseEnter={() => this.setState({topicSelect: 0})}>
+                <div className="circle-button">
+                  <Button icon='trophy' shape='circle' size='large' onMouseEnter={() => this.setState({topicSelect: 0})} />
+                </div>
+                <div className="circle-button">
+                <Button icon='coffee' shape='circle' size='large' onMouseEnter={() => this.setState({topicSelect: 1})} />
+                </div>
+                <div className="circle-button">
+                <Button icon='smile-o' shape='circle' size='large' onMouseEnter={() => this.setState({topicSelect: 2})} />
+                </div>
+{/*                 <a href='#what' onMouseEnter={() => this.setState({topicSelect: 0})}>
                   <Icon type='trophy' />
-                </a>
-                <a href='#how' onMouseEnter={() => this.setState({topicSelect: 1})}>
-                  <Icon type='coffee' />
-                </a>
-                <a href='#who' onMouseEnter={() => this.setState({topicSelect: 2})}>
-                  <Icon type='smile-o' />
-                </a>
+                </a> */}
               </div>
             </Col>
             <Col lg={8} sm={10} xs={20}>
-              <div className='desc'>
-                {this.state.topicWord[this.state.topicSelect].desc}
+              <div className='desc' dangerouslySetInnerHTML={this.state.topicWord[this.state.topicSelect].desc} />
+              <div className="go-button">
+                <Button icon='down' size='large' onClick={() => (window.location.href = this.state.topicWord[this.state.topicSelect].link)}>
+                  Find out more
+                </Button>
               </div>
             </Col>
           </Row>

@@ -11,19 +11,19 @@
 .face {
     margin-top: 5rem;
     height: calc(100vh - 5rem);
-    font-size: 3rem;
-}
-@media screen and (max-width: 768px) {
-    .section {
-        font-size: 2rem;
-    }
 }
 
-.logo {
+/* FIXXXXXXXXXXXXXXXX */
+.ant-row-flex {
+    width: 100%;
 }
+/* FIXXXXXXXXXXXXXXXX */
+
 .logo img {
     width: 100%;
     height: auto;
+    vertical-align: middle;
+    margin: 1ch 0;
 }
 .logo .prevWord,
 .logo .nextWord {
@@ -32,20 +32,20 @@
     line-height: 1;
 }
 
-.topic {
-}
-.topic a {
-    display: inline-block;
-    text-align: center;
+
+.circle-button button.ant-btn {
+    font-size: 2em;
     width: 2em;
     height: 2em;
-    line-height: 2;
-    border-radius: 100%;
-    background: white;
-    margin: .1em;
+    margin: .2em;
+}
+@media screen and (max-width: 768px) {
+    .circle-button {
+        display: inline-block;
+    }
 }
 
 .desc {
     /* font-size: 3rem; */
-    line-height: 1;
+    line-height: 2;
 }
