@@ -14,12 +14,6 @@ const menuWork = (
     <Menu.Item key="1">
       <Link to="/">數位服務</Link>
     </Menu.Item>
-    <Menu.Item key="2">
-      <Link to="/">社會企業</Link>
-    </Menu.Item>
-    <Menu.Item key="3">
-      <Link to="/">青年咨詢委員會</Link>
-    </Menu.Item>
     <Menu.Divider />
     <Menu.Item key="10">
       <Link to="/track">歷程</Link>
@@ -66,16 +60,16 @@ class Head extends React.Component {
 
         <nav className="fat-nav fat-only">
           <ul>
-            <li>
+            {/* <li>
               <p>
                 <Link to="/">首頁</Link>
               </p>
-            </li>
+            </li> */}
             <li>
               <Dropdown overlay={menuWork} trigger={['click']}>
                 <p>
                   <a className="ant-dropdown-link" href="#">
-                    工作紀錄 <Icon type="down" />
+                    我們做什麼 <Icon type="down" />
                   </a>
                 </p>
               </Dropdown>
@@ -84,14 +78,14 @@ class Head extends React.Component {
               <Dropdown overlay={menuHow} trigger={['click']}>
                 <p>
                   <a className="ant-dropdown-link" href="#">
-                    工作流程 <Icon type="down" />
+                    我們怎麼做 <Icon type="down" />
                   </a>
                 </p>
               </Dropdown>
             </li>
             <li>
               <p>
-                <Link to="/about">聯絡我們</Link>
+                <Link to="/about">我們是誰</Link>
               </p>
             </li>
           </ul>
